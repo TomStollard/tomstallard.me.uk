@@ -1,4 +1,3 @@
-`
 // DocPad Configuration File
 // http://docpad.org/docs/config
 
@@ -14,10 +13,10 @@ var docpadConfig = {
 			var projects = this.getCollection("html").findAllLive({relativeOutDirPath: "projects"});
 			projects.on("add", function(model){
 				model.setMetaDefaults({
-					layout: "page"
+					layout: "contentpage"
 				});
 			});
-			return this.getCollection("html").findAll({relativeOutDirPath: "projects"});
+			return projects;
 		}
 	},
   plugins: {
@@ -28,4 +27,3 @@ var docpadConfig = {
 }
 
 module.exports = docpadConfig;
-`
