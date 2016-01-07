@@ -30,12 +30,15 @@ body{
       line-height: 1.1em;
       background-size: 20px;
       color: white;
-      border: 0.03em solid transparent;
+      border: 1px solid transparent;
       transition: background-color 300ms, border-color 300ms;
       margin-left: 0.1em;
       margin-right: 0.1em;
       text-align: center;
-
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+      @media(max-width: 400px){
+        font-size: 10.5vw;
+      }
       &:hover, &.active{
         background-color: rgba(0, 0, 0, 0.2);
       }
