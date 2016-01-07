@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <title><%= document.title %> // Tom Stollard</title>
+    <link rel="stylesheet" href="/libs/Animate.css" />
+    <link rel="stylesheet" href="/libs/fa.css" />
+    <link rel="stylesheet" href="/styles.css" />
+    <script src="/libs/jquery.min.js"></script>
+    <script src="/libs/jquery.smoothState.min.js"></script>
+    <script src="/script.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <div id="main">
+      <div id="header">
+        <h1>Tom Stollard</h1>
+        <div id="nav">
+          <% var pages = getCollection("pages").toJSON() %>
+          <% pages.forEach(function(page){ %>
+            <a class="fa fa-<%= page.icon %> <% if(page.url.split("/")[1] == document.url.split("/")[1]){ %>active<% } %>" href="<%= page.url %>" data-rooturl="<%= page.url.split("/")[1] %>"></a>
+          <% }) %>
+        </div>
+      </div>
+      <div id="content" class="m-scene">
+        <meta data-menu="<%= document.url.split("/")[1] %>" />
+        <%- content %>
+      </div>
+    </div>
+    <div id="footer">
+      <h3>&copy; Tom Stollard 2015</h3>
+      Hand crafted in the UK with DocPad, SmoothState.js and lots of other magic - see the code on GitHub
+    </div>
+  </body>
+</html>
