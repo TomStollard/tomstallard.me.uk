@@ -1,0 +1,10 @@
+---
+layout: "contentpage"
+title: "Projects"
+icon: "wrench"
+order: 2
+---
+<% var projects = getCollection("projects").toJSON() %>
+<% projects.forEach(function(project){ %>
+  <a href="<%- project.url %>"><%= project.title %></a>
+<% }) %>
