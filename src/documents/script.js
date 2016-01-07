@@ -15,7 +15,7 @@ $(document).ready(function(){
       duration: 0,
       render: function (container, newContent) {
         container.removeClass("is-exiting");
-
+        container.attr("data-slug", $(newContent).filter("meta").data("slug"))
         container.html(newContent);
 
         var newmenu = $(newContent).filter("meta").data("menu");

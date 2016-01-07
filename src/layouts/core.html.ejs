@@ -20,8 +20,8 @@
           <% }) %>
         </div>
       </div>
-      <div id="content" class="m-scene">
-        <meta data-menu="<%= document.url.split("/")[1] %>" />
+      <div id="content" class="m-scene" data-slug="<%- document.slug %>">
+        <meta data-menu="<%= document.url.split("/")[1] %>" data-slug="<%- document.slug %>" />
         <%- content %>
       </div>
     </div>
