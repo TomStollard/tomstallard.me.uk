@@ -5,15 +5,15 @@ $(document).ready(function(){
     prefetch: true,
     debug: true,
     onStart: {
-      duration: 250,
+      duration: 400,
       render: function (container, url) {
-        container.addClass('is-exiting');
+        container.addClass("is-exiting");
         smoothState.restartCSSAnimations();
       }
     },
     onReady: {
       duration: 0,
-      render: function (container, newContent) {
+      render: function (container, newContent){
         container.removeClass("is-exiting");
         container.attr("data-slug", $(newContent).filter("meta").data("slug"))
         container.html(newContent);

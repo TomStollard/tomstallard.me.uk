@@ -81,16 +81,22 @@ body{
 }
 
 
-.m-scene .scene_element {
-  animation-duration: 0.25s;
+.animations .animated{
+  animation-duration: 0.4s;
   transition-toming-function: ease-in;
   animation-fill-mode: both;
 }
 
-.m-scene .scene_element--fadein {
-  animation-name: slideInUp;
+.animations.is-exiting .animated{
+  animation-direction: alternate-reverse;
 }
 
-.m-scene.is-exiting .scene_element {
-  animation-direction: alternate-reverse;
+.animations[data-slug="index"]{
+  >div{
+    animation-name: slideInRight;
+  }
+}
+
+.animations #lightcontent{
+  animation-name: slideInUp;
 }
