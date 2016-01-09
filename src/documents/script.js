@@ -7,6 +7,9 @@ $(document).ready(function(){
     onStart: {
       duration: 400,
       render: function (container, url) {
+        $("body").animate({
+          scrollTop: 0
+        }, 400);
         container.addClass("is-exiting");
         smoothState.restartCSSAnimations();
       }

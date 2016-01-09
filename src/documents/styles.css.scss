@@ -108,9 +108,6 @@ body{
       @media(min-width: 800px){
         min-height: calc(50vh - 165px);
       }
-      >div{
-
-      }
     }
   }
 }
@@ -135,6 +132,7 @@ body{
 
 .animations.is-exiting .animated{
   animation-direction: alternate-reverse;
+  animation-delay: 0ms !important;
 }
 
 #content{
@@ -142,45 +140,137 @@ body{
 }
 
 #content[data-slug="index"]{
-  #desktop{
+  #big{
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-  }
-  #columns{
-    flex-grow: 1;
-    display: flex;
-    flex-direction: row;
-    >div{
+    #columns{
       flex-grow: 1;
-      width: 50%;
-      margin: 20px;
       display: flex;
-      align-items: center;
-      justify-content: center;
-      &:last-child{
-        img{
-          display: block;
-          width: 70%;
-          border-radius: 100%;
+      flex-direction: row;
+      >div{
+        flex-grow: 1;
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:first-child{
+          @at-root .animations#{&}{
+            animation-name: slideInLeft;
+          }
+          >#text{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            h1, h2{
+              text-align: center;
+              font-weight: normal;
+              margin: 0;
+            }
+            h1{
+              margin-bottom: -1.7vw;
+            }
+            h2{
+              margin-bottom: 10px;
+            }
+            #maindesc{
+              width: 80%;
+            }
+          }
+        }
+        &:last-child{
+          @at-root .animations#{&}{
+            animation-name: slideInRight;
+          }
+          img{
+            display: block;
+            width: 70%;
+            border-radius: 100%;
+          }
         }
       }
     }
-  }
-  #social{
-    height: 150px;
-    background-color: purple;
-  }
-  &.animations{
-    #columns>div:first-child{
-      animation-name: slideInLeft;
+    .social{
+      @at-root .animations#{&}{
+        animation-name: fadeInUp;
+        animation-delay: 150ms;
+      }
     }
-    #columns>div:last-child{
-      animation-name: slideInRight;
+  }
+
+  .social{
+    text-align: center;
+    margin-bottom: 10px;
+    >.fa{
+      font-size: 5em;
+      margin-left: 10px;
+      margin-right: 10px;
+      color: white;
+      text-decoration: none;
     }
-    #social{
-      animation-name: fadeInUp;
-      animation-delay: 150ms;
+  }
+
+  #slim{
+      @at-root .animations.is-exiting#{&}{
+        .animated{
+          animation-name: none;
+          animation-delay: 0ms;
+        }
+        animation-name: fadeInUp;
+      }
+      .header{
+        @at-root .animations#{&}{
+          animation-name: fadeInUp;
+        }
+        h1, h2{
+          margin: 0;
+          text-align: center;
+        }
+        h1{
+          margin-bottom: -0.15em;
+        }
+      }
+      >img{
+        margin-top: 20px;
+        margin-bottom: 20px;
+        @at-root .animations#{&}{
+          animation-name: fadeInUp;
+          animation-delay: 100ms;
+        }
+        display: block;
+        width: 70%;
+        border-radius: 100%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .description{
+        @at-root .animations#{&}{
+          animation-name: fadeInUp;
+          animation-delay: 200ms;
+        }
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;
+      }
+      .social{
+        @at-root .animations#{&}{
+          animation-name: fadeInUp;
+          animation-delay: 300ms;
+        }
+      }
+  }
+
+  //media queries at end to override display flex earlier
+  @media(min-width: 901px){
+    #slim{
+      display: none;
+    }
+  }
+  @media(max-width: 900px){
+    #big{
+      display: none;
     }
   }
 }
