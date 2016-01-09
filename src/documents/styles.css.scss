@@ -20,6 +20,7 @@ body{
 #header{
   text-align: center;
   #nav{
+    margin-bottom: 10px;
     >a{
       text-decoration: none;
       font-size: 2.7em;
@@ -53,18 +54,63 @@ body{
   transition: background-color 400ms, color 400ms;
   background-color: transparent;
   display: flex;
+  flex-direction: column;
 
   #lightcontent{
     background-color: white;
     color: black;
     flex-grow: 1;
-    margin-top: 20px;
+    box-shadow: 0px 20px 10px -10px #6d0000 inset, 0px -20px 10px -10px #6d0000 inset;
+    padding-top: 10px;
+    padding-bottom: 20px;
     >div{
       width: 80%;
       max-width: 1100px;
       margin-left: auto;
       margin-right: auto;
       margin-top: 10px;
+    }
+  }
+
+  #imgcontent{
+    >#headerimg{
+      width: 100%;
+      height: calc(100vh - 165px + 50px);
+      min-height: 350px;
+      box-shadow: 0px 50px 30px -30px #6d0000 inset, 0px -50px 30px -30px white inset;
+      @media(orientation: landscape), (min-width: 800px){
+        max-height: 50vh;
+      }
+      background:
+        linear-gradient(
+          rgba(0, 0, 0, 0.5),
+          rgba(0, 0, 0, 0.5)
+        ),
+        url("/img/contact.jpg");
+      background-size: cover;
+      background-position: 50% 50%;
+      display: flex;
+      z-index: 10;
+      #headerdesc{
+        margin: auto;
+        color: white;
+        h1{
+          font-size: 3em;
+        }
+      }
+    }
+    >#maincontent{
+      width: 100%;
+      background-color: white;
+      color: black;
+      min-height: 100px;
+      display: block;
+      @media(min-width: 800px){
+        min-height: calc(50vh - 165px);
+      }
+      >div{
+
+      }
     }
   }
 }
@@ -93,10 +139,33 @@ body{
 
 .animations[data-slug="index"]{
   >div{
-    animation-name: slideInRight;
+    animation-name: fadeIn;
   }
 }
 
 .animations #lightcontent{
   animation-name: slideInUp;
+}
+
+.animations{
+  #headerimg{
+    //animation-name: fadeInUp;
+  }
+  #maincontent{
+    //animation-name: fadeInUpBig;
+    //animation-delay: 150ms;
+  }
+  #imgcontent{
+    animation-name: fadeInUp;
+  }
+  &.is-exiting{
+    #imgcontent{
+      animation-name: fadeOutDown;
+      animation-direction: normal;
+    }
+    #headerimg, #maincontent{
+      animation-name: none;
+      animation-duration: 0ms;
+    }
+  }
 }
