@@ -137,35 +137,59 @@ body{
   animation-direction: alternate-reverse;
 }
 
-.animations[data-slug="index"]{
-  >div{
-    animation-name: fadeIn;
-  }
+#content{
+  overflow: hidden;
 }
 
-.animations #lightcontent{
-  animation-name: slideInUp;
+#content[data-slug="index"]{
+  #desktop{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  #columns{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    >div{
+      flex-grow: 1;
+      width: 50%;
+      margin: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &:last-child{
+        img{
+          display: block;
+          width: 70%;
+          border-radius: 100%;
+        }
+      }
+    }
+  }
+  #social{
+    height: 150px;
+    background-color: purple;
+  }
+  &.animations{
+    #columns>div:first-child{
+      animation-name: slideInLeft;
+    }
+    #columns>div:last-child{
+      animation-name: slideInRight;
+    }
+    #social{
+      animation-name: fadeInUp;
+      animation-delay: 150ms;
+    }
+  }
 }
 
 .animations{
-  #headerimg{
-    //animation-name: fadeInUp;
-  }
-  #maincontent{
-    //animation-name: fadeInUpBig;
-    //animation-delay: 150ms;
-  }
   #imgcontent{
     animation-name: fadeInUp;
   }
-  &.is-exiting{
-    #imgcontent{
-      animation-name: fadeOutDown;
-      animation-direction: normal;
-    }
-    #headerimg, #maincontent{
-      animation-name: none;
-      animation-duration: 0ms;
-    }
+  #lightcontent{
+    animation-name: slideInUp;
   }
 }
