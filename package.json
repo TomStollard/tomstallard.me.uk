@@ -4,6 +4,7 @@
   "description": "New DocPad project without using a skeleton",
   "dependencies": {
     "docpad": "~6.78.4",
+    "docpad-plugin-autoprefix": "~2.0.0",
     "docpad-plugin-cleanurls": "~2.8.1",
     "docpad-plugin-ejs": "~2.0.2",
     "docpad-plugin-nodesass": "~2.8.1"
