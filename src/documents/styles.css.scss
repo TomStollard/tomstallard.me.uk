@@ -19,6 +19,14 @@ body{
 
 #header{
   text-align: center;
+  h1{
+    font-size: 15vw;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    @media(min-width: 320px){
+      font-size: 3em;
+    }
+  }
   #nav{
     margin-bottom: 10px;
     >a{
