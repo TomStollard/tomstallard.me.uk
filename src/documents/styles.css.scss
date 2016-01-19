@@ -277,15 +277,20 @@ body{
       }
   }
 
-  //media queries at end to override display flex earlier
-  @media(min-width: 901px){
-    #slim{
-      display: none;
-    }
+  //big view, normal
+  #slim{
+    display: none;
   }
-  @media(max-width: 900px){
+  #big{
+    display: flex;
+  }
+  @media(max-width: 700px), (min-height: 120vw){
+    //vertical or small width
     #big{
       display: none;
+    }
+    #slim{
+      display: block;
     }
   }
 }
