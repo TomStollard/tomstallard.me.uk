@@ -1,5 +1,5 @@
 ---
-layout: "contentpage"
+layout: "imgcontentpage"
 title: "Projects"
 icon: "wrench"
 order: 2
@@ -8,3 +8,4 @@ order: 2
 <% projects.forEach(function(project){ %>
   <a href="<%- project.url %>"><%= project.title %></a>
 <% }) %>
+<% document.subtitle = "Some things that I've been working on..." %>

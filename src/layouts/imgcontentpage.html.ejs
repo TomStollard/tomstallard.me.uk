@@ -1,10 +1,13 @@
 ---
-layout: core.html
+layout: core
 ---
 <div id="imgcontent" class="animated">
-  <div id="headerimg" class="animated">
+  <div id="headerimg" class="animated" style="background: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url('/img/headers<%- document.url %>.jpg');background-size: cover;background-position: 50% 50%;">
     <div id="headerdesc">
       <h1><%- document.title %></h1>
+      <% if(document.subtitle){ %>
+        <h2><%- document.subtitle %></h2>
+      <% } %>
     </div>
   </div>
   <div id="maincontent" class="animated">
