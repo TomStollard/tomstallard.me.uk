@@ -289,12 +289,31 @@ body{
 }
 
 #content[data-slug="contact"]{
+  font-size: 1.2em;
   >div{ //page container
     flex-grow: 1;
+    margin-left: 10px;
+    margin-right: 10px;
     display: flex;
     >div{ //contact panels
       text-align: center;
       display: flex;
+      &:nth-child(1){
+        @at-root .animations#{&}{
+          animation-delay: 0ms;
+        }
+      }
+      &:nth-child(2){
+        @at-root .animations#{&}{
+          animation-delay: 200ms;
+        }
+      }
+      &:nth-child(3){
+        @at-root .animations#{&}{
+          animation-delay: 400ms;
+        }
+      }
+
       >div{ //centered sections
         margin: auto;
         >.icon{
@@ -325,57 +344,46 @@ body{
       }
     }
   }
-  @media(min-width: 800px){
+  @media(min-width: 800px) and (max-height: 120vw){
     >div{ //page container
       flex-direction: row;
       >div{ //contact panels
         width: 33%;
         flex-grow: 1;
+        padding-left: 15px;
+        padding-right: 15px;
         text-align: center;
         display: flex;
         &:nth-child(1n+2){
           border-left: solid 2px white;
         }
-        .icon{
-          font-size: 12vw;
-        }
-
         @at-root .animations#{&}{
           animation-name: slideInUp;
         }
-        &:nth-child(1){
-          @at-root .animations#{&}{
-            animation-delay: 0ms;
-          }
-        }
-        &:nth-child(2){
-          @at-root .animations#{&}{
-            animation-delay: 200ms;
-          }
-        }
-        &:nth-child(3){
-          @at-root .animations#{&}{
-            animation-delay: 400ms;
+        .icon{
+          font-size: 12vw;
+          @media(min-width: 1800px){
+            font-size: 216px;
           }
         }
       }
     }
   }
-  @media(max-width: 799px){
+  @media(max-width: 799px), (min-height: 120vw){
     >div{
       flex-direction: column;
-      @at-root .animations#{&}{
-        animation-name: fadeInUp;
-      }
       >div{
         border-bottom: 2px solid white;
         padding-top: 20px;
         padding-bottom: 20px;
+        @at-root .animations#{&}{
+          animation-name: fadeInUp;
+        }
         &:last-child{
           border-bottom: none;
         }
-        >.icon{
-          font-size: 15vw;
+        .icon{
+          font-size: 20vw;
         }
       }
     }
