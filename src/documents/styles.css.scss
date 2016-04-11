@@ -314,6 +314,26 @@ body{
         }
       }
 
+      &#formcontainer{
+        #completed{
+          display: none;
+        }
+        &.completed{
+          #inputscontainer{
+            animation-name: zoomOut;
+          }
+        }
+        &.completedmsg{
+          #inputscontainer{
+            display: none;
+          }
+          #completed{
+            animation-name: zoomIn;
+            display: block;
+          }
+        }
+      }
+
       >div{ //centered sections
         margin: auto;
         >.icon{
@@ -344,7 +364,7 @@ body{
       }
     }
   }
-  @media(min-width: 800px) and (max-height: 120vw){
+  @media (min-width: 800px) and (max-height: 120vw){
     >div{ //page container
       flex-direction: row;
       >div{ //contact panels
