@@ -37,12 +37,22 @@ order: 1
 </div>
 <script>
   $("#contactform").submit(function(e){
-    $("#formcontainer").addClass("completed");
-    setTomeout(function(){
-      $("#formcontainer").addClass("completedmsg");
-    }, 400)
+    $.post(
+      "/contactsubmit.php",
+      {
+        name: $("input[name='name']").val(),
+        subject: $("input[name='subject']").val(),
+        contact: $("input[name='contact']").val(),
+        message: $("textarea").val()
+      },
+      function(){
+        $("#formcontainer").addClass("completed");
+        setTomeout(function(){
+          $("#formcontainer").addClass("completedmsg");
+        }, 400);
+      }
+    )
     e.preventDefault();
-    //alert("done");
     return false;
   });
 </script>
