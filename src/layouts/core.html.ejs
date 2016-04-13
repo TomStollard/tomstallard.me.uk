@@ -22,13 +22,15 @@
         <div id="nav">
           <% var pages = getCollection("pages").toJSON() %>
           <% pages.forEach(function(page){ %>
+            <% if(!page.hidden){ %>
             <a class="fa fa-<%= page.icon %> <% if(page.url.split("/")[1] == document.url.split("/")[1]){ %>active<% } %>" href="<%= page.url %>" data-rooturl="<%= page.url.split("/")[1] %>"></a>
+            <% } %>
           <% }) %>
         </div>
       </div>
       <div id="content" class="animations" data-slug="<%- document.slug %>">
         <meta data-menu="<%= document.url.split("/")[1] %>" data-slug="<%- document.slug %>" />
-        <%- content %>
+        <%- content.replace("-split-", "") %>
       </div>
     </div>
     <div id="footer">

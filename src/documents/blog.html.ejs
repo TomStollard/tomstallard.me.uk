@@ -1,0 +1,17 @@
+---
+layout: "imgcontentpage"
+title: "Blog"
+icon: "pencil"
+order: 2
+referencesOthers: true
+---
+<% var posts = getCollection("posts").toJSON() %>
+<% posts.forEach(function(post){ %>
+  <div class="post">
+  <h2><a href="<%- post.url %>"><%= post.title %></a></h2>
+  <div class="date"><%- post.formattedDate %></div>
+  <div class="firstcontent">
+    <%- post.contentRenderedWithoutLayouts.split("-split-")[0] %>
+  </div>
+  </div>
+<% }) %>

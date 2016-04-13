@@ -22,7 +22,16 @@ var docpadConfig = {
   plugins: {
     cleanurls: {
       static: true
-    }
+    },
+		moment: {
+			formats: [
+				{
+					raw: "date",
+					format: "MMMM Do, YYYY",
+					formatted: "formattedDate"
+				}
+			]
+		}
   }
 }
 

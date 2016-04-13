@@ -7,6 +7,7 @@
     "docpad-plugin-autoprefix": "~2.0.0",
     "docpad-plugin-cleanurls": "~2.8.1",
     "docpad-plugin-ejs": "~2.0.2",
+    "docpad-plugin-moment": "~2.0.2",
     "docpad-plugin-nodesass": "~2.8.1"
   },
   "main": "node_modules/.bin/docpad-server",
