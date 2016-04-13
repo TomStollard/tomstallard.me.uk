@@ -71,6 +71,9 @@ body{
   flex-direction: column;
 
   #lightcontent{
+    @at-root .animations#{&}{
+      animation-name: slideInUp;
+    }
     background-color: white;
     color: black;
     flex-grow: 1;
@@ -96,6 +99,9 @@ body{
   }
 
   #imgcontent{
+    @at-root .animations#{&}{
+      animation-name: fadeInUp;
+    }
     >#headerimg{
       width: 100%;
       height: calc(100vh - 165px + 50px);
@@ -330,7 +336,7 @@ body{
         }
         &.completed{
           #inputscontainer{
-            animation-name: zoomOut;
+            animation-name: zoomOutUp;
           }
         }
         &.completedmsg{
@@ -434,15 +440,6 @@ body{
       text-align: center;
       margin: 0;
     }
-  }
-}
-
-.animations{
-  #imgcontent{
-    animation-name: fadeInUp;
-  }
-  #lightcontent{
-    animation-name: slideInUp;
   }
 }
 

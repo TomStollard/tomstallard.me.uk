@@ -32,7 +32,31 @@ var docpadConfig = {
 				}
 			]
 		}
-  }
+  },
+	templateData: {
+		site: {
+			scripts: [
+
+			]
+		}
+	},
+	events: {
+		populateCollections: function(){
+			this.docpad.blocks["scripts"].add([
+				"/libs/jquery.min.js",
+				"/libs/jquery.smoothState.min.js",
+				"/script.js"
+			], {
+				defer: false
+			});
+			this.docpad.blocks["styles"].add([
+				"/libs/Animate.css",
+				"/libs/fa.css",
+				"/styles.css",
+				"https://fonts.googleapis.com/css?family=Open+Sans"
+			]);
+		}
+	}
 }
 
 module.exports = docpadConfig;
