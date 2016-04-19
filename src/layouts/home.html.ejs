@@ -1,0 +1,39 @@
+---
+layout: core
+---
+<div id="big">
+  <div id="columns">
+    <div class="animated">
+      <div id="text">
+        <h1 style="font-size: 7.85vw; font-family: 'Open Sans';"><%- document.bigtitle %></h1>
+        <h2 style="font-size: 1.48vw;"><%- document.subtitle %></h2>
+        <div id="maindesc">
+          <%- content %>
+        </div>
+      </div>
+    </div>
+    <div class="animated">
+      <img src="/img/Photo.jpg" />
+    </div>
+  </div>
+  <div class="social animated">
+    <a class="fa fa-twitter-square" href="https://twitter.com/Tom_Stollard" target="_blank"></a>
+    <a class="fa fa-facebook-square" href="https://facebook.com/geekytom" target="_blank"></a>
+    <a class="fa fa-github-square" href="https://github.com/TomStollard" target="_blank"></a>
+  </div>
+</div>
+<div id="slim" class="animated">
+  <div class="header animated">
+    <h1 style="font-size: 15.8vw; font-family: 'Open Sans';"><%- document.bigtitle %></h1>
+    <h2 style="font-size: 3vw;"><%- document.subtitle %></h2>
+  </div>
+  <img src="/img/Photo.jpg" class="animated" />
+  <div class="description animated">
+    <%- content %>
+  </div>
+  <div class="social animated">
+    <a class="fa fa-twitter-square" href="https://twitter.com/Tom_Stollard" target="_blank"></a>
+    <a class="fa fa-facebook-square" href="https://facebook.com/geekytom" target="_blank"></a>
+    <a class="fa fa-github-square" href="https://github.com/TomStollard" target="_blank"></a>
+  </div>
+</div>
