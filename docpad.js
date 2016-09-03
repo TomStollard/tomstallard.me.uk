@@ -7,12 +7,18 @@ var docpadConfig = {
 				return this.getCollection("html").findAllLive({relativeOutDirPath: "."}, [{order: 1}]);
 		},
 		posts: function(){
-				return this.getCollection("html").findAll({relativeOutDirPath: "blog"});
+				var posts = this.getCollection("html").findAllLive({relativeOutDirPath: "blog"});
+				posts.on("add", function(post){
+					post.setMetaDefaults({
+						layout: "blogpost"
+					});
+				});
+				return posts;
 		},
 		projects: function(){
 			var projects = this.getCollection("html").findAllLive({relativeOutDirPath: "projects"});
-			projects.on("add", function(model){
-				model.setMetaDefaults({
+			projects.on("add", function(project){
+				project.setMetaDefaults({
 					layout: "contentpage"
 				});
 			});

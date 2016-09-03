@@ -8,10 +8,12 @@ referencesOthers: true
 <% var posts = getCollection("posts").toJSON() %>
 <% posts.forEach(function(post){ %>
   <div class="post">
-  <h2><a href="<%- post.url %>"><%= post.title %></a></h2>
-  <div class="date"><%- post.formattedDate %></div>
-  <div class="firstcontent blogpost">
-    <%- post.contentRenderedWithoutLayouts.split("-split-")[0] %>
-  </div>
+    <h2 class="title"><a href="<%- post.url %>"><%= post.title %></a></h2>
+    <h3 class="subtitle"><%- post.subtitle %></h3>
+    <h4 class="date"><%- post.formattedDate %></h4>
+    <div class="firstcontent blogpost">
+      <%- post.contentRenderedWithoutLayouts.split("-split-")[0] %>
+    </div>
+    <a class="morelink" href="<%- post.url %>">Read More...</a>
   </div>
 <% }) %>

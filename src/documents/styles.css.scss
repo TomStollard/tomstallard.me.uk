@@ -87,11 +87,8 @@ body{
       margin-right: auto;
       margin-top: 10px;
     }
-    h1, h2, h3.date{
+    h1, h2, h3{
       text-align: center;
-    }
-    h3.date{
-      margin-top: 0px;
     }
     h1{
       margin-bottom: 5px;
@@ -439,14 +436,31 @@ body{
     margin-right: auto;
     padding-top: 10px;
     padding-bottom: 10px;
-    h2, .date{
+
+    h2.title a{
+      color: inherit;
+    }
+    h2.title, h3.subtitle, h4.date{
       text-align: center;
       margin: 0;
+    }
+    h3.subtitle, h4.date{
+      font-weight: normal;
     }
   }
 }
 
-.blogpost{
+#content[data-slug^="blog-"]{
+  h1#title{
+    margin-bottom: 3px;
+  }
+  h2#subtitle, h3#date{
+    margin: 0;
+    font-weight: normal;
+  }
+}
+
+#content[data-slug^="blog"] .blogpost{
   width: 100%;
   max-width: 800px;
   margin-left: auto;

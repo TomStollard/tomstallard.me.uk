@@ -2,10 +2,10 @@
 layout: contentpage
 ---
 
-<h3 class="date"><%- document.formattedDate %></h3>
 <% if(document.subtitle){ %>
-  <h2><%- document.subtitle %></h2>
+  <h2 id="subtitle"><%- document.subtitle %></h2>
 <% } %>
+<h3 id="date"><%- document.formattedDate %></h3>
 <div class="blogpost">
   <%- content %>
 </div>

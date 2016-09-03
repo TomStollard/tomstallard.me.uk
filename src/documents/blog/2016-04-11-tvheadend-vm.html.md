@@ -1,5 +1,4 @@
 ---
-layout: "blogpost"
 title: "Running TVheadend in a VM"
 date: 2016-04-11
 subtitle: "Or how I went from trying to watch HD TV to changing hypervisor..."
