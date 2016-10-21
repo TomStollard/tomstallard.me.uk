@@ -37,6 +37,9 @@ var docpadConfig = {
 					formatted: "formattedDate"
 				}
 			]
+		},
+		livereload: {
+			enabled: true
 		}
   },
 	templateData: {
@@ -61,6 +64,15 @@ var docpadConfig = {
 				"/styles.css",
 				"https://fonts.googleapis.com/css?family=Open+Sans"
 			]);
+		}
+	},
+	environments: {
+		static: {
+			plugins: {
+				livereload: {
+					enabled: false
+				}
+			}
 		}
 	}
 }

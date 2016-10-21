@@ -9,6 +9,7 @@ This is the code behind tomstollard.me.uk, which is built using Docpad.
    (note: you'll need to use `docpad.cmd` on Windows, due to an bug, since a plain js docpad config file is being used, rather than coffeescript)
 
 ### To compile the site for deployment:  
-1. Run `docpad generate`
+1. Run `docpad clean` to remove dev files
+2. Run `docpad generate --env=static`
 
 &copy; Tom Stollard 2016
