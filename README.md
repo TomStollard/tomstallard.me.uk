@@ -11,5 +11,6 @@ This is the code behind tomstollard.me.uk, which is built using Docpad.
 ### To compile the site for deployment:  
 1. Run `docpad clean` to remove dev files
 2. Run `docpad generate --env=static`
+3. Copy contactsubmit/conf.example.php to contactsubmit/conf.php, and update options as required
 
 &copy; Tom Stollard 2016

@@ -40,7 +40,7 @@ order: 1
 <script>
   $("#contactform").submit(function(e){
     $.post(
-      "/contactsubmit.php",
+      "/contactsubmit/",
       {
         name: $("input[name='name']").val(),
         subject: $("input[name='subject']").val(),
