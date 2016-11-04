@@ -3,14 +3,14 @@
   "version": "0.1.0",
   "description": "The source code for the tomstollard.me.uk site",
   "dependencies": {
-    "docpad": "~6.78.4",
+    "docpad": "~6.79.0",
     "docpad-plugin-autoprefix": "~2.0.0",
     "docpad-plugin-cleanurls": "~2.8.1",
     "docpad-plugin-ejs": "~2.0.2",
     "docpad-plugin-livereload": "~2.7.1",
     "docpad-plugin-marked": "~2.3.0",
     "docpad-plugin-moment": "~2.0.2",
-    "docpad-plugin-nodesass": "~2.8.1"
+    "docpad-plugin-nodesass": "~2.8.2"
   },
   "main": "node_modules/.bin/docpad-server",
   "scripts": {
