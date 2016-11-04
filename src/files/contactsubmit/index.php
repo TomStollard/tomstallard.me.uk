@@ -1,7 +1,7 @@
 <?php
 
-require "./dependencies/class.smtp.php";
-require "./dependencies/class.phpmailer.php";
+require "./vendor/class.smtp.php";
+require "./vendor/class.phpmailer.php";
 require "./conf.php";
 
 $mail = new PHPMailer;

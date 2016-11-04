@@ -45,16 +45,16 @@ var docpadConfig = {
 	events: {
 		populateCollections: function(){
 			this.docpad.blocks["scripts"].add([
-				"/dependencies/jquery.min.js",
-				"/dependencies/jquery.smoothState.min.js",
+				"/vendor/jquery.min.js",
+				"/vendor/jquery.smoothState.min.js",
 				"/script.js"
 			], {
 				defer: false
 			});
 			this.docpad.blocks["styles"].add([
-				"/dependencies/Animate.css",
-				"/dependencies/fa.css",
-				"/dependencies/agate.css",
+				"/vendor/Animate.css",
+				"/vendor/fa.css",
+				"/vendor/agate.css",
 				"/styles.css",
 				"https://fonts.googleapis.com/css?family=Open+Sans"
 			]);
