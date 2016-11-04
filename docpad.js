@@ -54,6 +54,7 @@ var docpadConfig = {
 			this.docpad.blocks["styles"].add([
 				"/libs/Animate.css",
 				"/libs/fa.css",
+				"/libs/agate.css",
 				"/styles.css",
 				"https://fonts.googleapis.com/css?family=Open+Sans"
 			]);
