@@ -7,7 +7,7 @@ var docpadConfig = {
 				return this.getCollection("html").findAllLive({relativeOutDirPath: "."}, [{order: 1}]);
 		},
 		posts: function(){
-				var posts = this.getCollection("html").findAllLive({relativeOutDirPath: "blog"});
+				var posts = this.getCollection("html").findAllLive({relativeOutDirPath: "blog"}, [{date: -1}]);
 				posts.on("add", function(post){
 					post.setMetaDefaults({
 						layout: "blogpost"
@@ -42,13 +42,6 @@ var docpadConfig = {
 			enabled: true
 		}
   },
-	templateData: {
-		site: {
-			scripts: [
-
-			]
-		}
-	},
 	events: {
 		populateCollections: function(){
 			this.docpad.blocks["scripts"].add([
