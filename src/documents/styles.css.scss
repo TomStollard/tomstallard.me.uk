@@ -431,7 +431,7 @@ body{
   }
 }
 
-#content[data-slug="blog"]{
+#content[data-slug="blog"]{ //main page
   .post{
     width: 80%;
     max-width: 800px;
@@ -439,6 +439,16 @@ body{
     margin-right: auto;
     padding-top: 10px;
     padding-bottom: 10px;
+
+    .blogpost{
+      p:first-of-type{
+        margin-top: 0.4em;
+      }
+
+      p:last-of-type{
+        margin-bottom: 0.2em;
+      }
+    }
 
     h2.title a{
       color: inherit;
@@ -453,7 +463,7 @@ body{
   }
 }
 
-#content[data-slug^="blog-"]{
+#content[data-slug^="blog-"]{ //individual post
   h1#title{
     margin-bottom: 3px;
   }
@@ -463,10 +473,12 @@ body{
   }
 }
 
-#content[data-slug^="blog"] .blogpost{
-  width: 100%;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-  line-height: 1.55;
+#content[data-slug^="blog"]{ //posts and main page
+  .blogpost{
+    width: 100%;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.55;
+  }
 }
