@@ -60,6 +60,11 @@ var docpadConfig = {
 			]);
 		}
 	},
+	templateData: {
+		site: {
+			isso_url: "https://comments.tomstollard.me.uk/"
+		}
+	},
 	environments: {
 		static: {
 			plugins: {

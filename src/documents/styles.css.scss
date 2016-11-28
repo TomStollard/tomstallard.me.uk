@@ -81,7 +81,7 @@ body{
     padding-top: 10px;
     padding-bottom: 20px;
     >div{
-      width: 80%;
+      width: 90%;
       max-width: 1100px;
       margin-left: auto;
       margin-right: auto;
@@ -137,7 +137,7 @@ body{
   padding-top: 20px;
   padding-bottom: 20px;
   text-align: center;
-  width: 80%;
+  width: 90%;
   margin-left: auto;
   margin-right: auto;
   h3{
@@ -433,7 +433,7 @@ body{
 
 #content[data-slug="blog"]{ //main page
   .post{
-    width: 80%;
+    width: 90%;
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
@@ -474,11 +474,13 @@ body{
 }
 
 #content[data-slug^="blog"]{ //posts and main page
-  .blogpost{
+  .blogpost, #isso-thread{
     width: 100%;
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
+  }
+  .blogpost{
     line-height: 1.55;
   }
 }

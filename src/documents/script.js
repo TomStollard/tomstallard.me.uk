@@ -2,8 +2,7 @@ var smoothState;
 
 $(document).ready(function(){
   var options = {
-    prefetch: true,
-    debug: true,
+    prefetch: true, 
     onStart: {
       duration: 400,
       render: function (container, url) {
