@@ -74,6 +74,9 @@ body{
     @at-root .animations#{&}{
       animation-name: slideInUp;
     }
+    @at-root .animations.initial-load#{&}{
+      animation-name: none;
+    }
     background-color: white;
     color: black;
     flex-grow: 1;
@@ -98,6 +101,9 @@ body{
   #imgcontent{
     @at-root .animations#{&}{
       animation-name: fadeInUp;
+    }
+    @at-root .animations.initial-load#{&}{
+      animation-name: none;
     }
     >#headerimg{
       width: 100%;

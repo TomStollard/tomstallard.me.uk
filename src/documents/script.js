@@ -9,6 +9,7 @@ $(document).ready(function(){
         $("body").animate({
           scrollTop: 0
         }, 400);
+        container.removeClass("initial-load");
         container.addClass("is-exiting");
         smoothState.restartCSSAnimations();
       }

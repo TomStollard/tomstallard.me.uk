@@ -23,7 +23,7 @@
           <% }) %>
         </div>
       </div>
-      <div id="content" class="animations<% if(document.addclass){ %> <%= document.addclass %><% } %>" data-slug="<%- document.slug %>">
+      <div id="content" class="animations<% if(document.addclass){ %> <%= document.addclass %><% } %> initial-load" data-slug="<%- document.slug %>">
         <meta data-menu="<%= document.url.split("/")[1] %>" data-slug="<%- document.slug %>" />
         <%- content.replace("-split-", "") %>
       </div>
