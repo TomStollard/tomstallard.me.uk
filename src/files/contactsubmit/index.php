@@ -20,8 +20,8 @@ foreach($_POST as $item => $contents){
   $message .= $item . ": " . $contents . "\n";
 }
 
-$mail->setFrom($mailconf["address"], "Website Contact");
-$mail->addAddress($mailconf["address"], "Website Contact");
+$mail->setFrom($mailconf["fromaddress"], "Website Contact Form");
+$mail->addAddress($mailconf["toaddress"], "Website Contact");
 $mail->addReplyTo($_POST["contact"], $_POST["name"]);
 
 $mail->Subject = "Website Contact Page Message";

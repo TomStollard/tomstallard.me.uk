@@ -5,5 +5,6 @@ $mailconf = [
   "password" => "",
   "security" => "tls",
   "port" => 587,
-  "address" => ""
+  "fromaddress" => "",
+  "toaddress" => ""
 ]
