@@ -15,6 +15,9 @@
   },
   "main": "node_modules/.bin/docpad-server",
   "scripts": {
-    "start": "node_modules/.bin/docpad-server"
+    "run": "docpad run",
+    "run-win": "docpad.cmd run",
+    "build": "docpad clean && docpad generate --env=static",
+    "build-win": "docpad.cmd clean && docpad.cmd generate --env=static"
   }
 }

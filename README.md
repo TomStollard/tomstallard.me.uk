@@ -5,13 +5,15 @@ This is the code behind tomstollard.me.uk, which is built using Docpad.
 ### To run:  
 1. You'll need Node and npm to be installed
 2. Install dependencies, by running `npm i`
-3. Automagically compile the site and run a web server using `docpad run`  
-   (note: you'll need to use `docpad.cmd` on Windows, due to an bug, since a plain js docpad config file is being used, rather than coffeescript)
+3. Automagically compile the site and run a web server using `npm run run`
+
+You'll need to use `docpad.cmd` instead of `docpad` on Windows, due to an bug, since a plain js docpad config file is being used, rather than coffeescript.
+With the `npm run` commands, simply append `-win` to the command name to reference `docpad.cmd`.
+
 
 ### To compile the site for deployment:  
-1. Run `docpad clean` to remove dev files
-2. Run `docpad generate --env=static`
-3. Copy contactsubmit/conf.example.php to contactsubmit/conf.php, and update options as required
+1. Run `npm run build` to remove existing files from development, and to generate the site in the correct mode
+2. Copy contactsubmit/conf.example.php to contactsubmit/conf.php, and update options as required
 
 ### Setting up commenting system
 1. These instructions are written for systemd-based Ubuntu, but should work fine on Debian as well. For security reasons, the installation of isso should be done under another user account - I made an account called isso.
