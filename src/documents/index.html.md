@@ -4,8 +4,8 @@ title: "Home"
 icon: "home"
 order: 0
 bigtitle: "Hi, I'm Tom!"
-subtitle: "Programmer, Student, Hardware-hacker, Sysadmin, Geek."
+subtitle: "Student, Sysadmin, Programmer, Geek."
 ---
-Hey There! I'm Tom, a 18 year old guy from Warwickshire who's a bit obsessed with technology. When I'm not sitting in lessons studying for my A Levels, you'll normally find me in a dark room, surrounded by screens, messing around with some code or servers.
+Hey There! I'm Tom, a 18 year old guy who's a bit obsessed with technology. I'm currently a Computer Science Undergraduate at the University of Southampton.
 
-I primarily do Web Development, starting with HTML when I was around 8, and more recently including some fun server-side projects using modern technologies such as Node.JS. I also enjoy working with computer hardware, ranging from building my own systems to maintaining a small homelab set of servers. While I'm a day-to-day Windows guy, I'm equally at home sitting at a Linux command line.
+I am primarily interested in networking and security, and maintain a small set of personal linux servers which I use for learning about networking, and testing new systems. I also have experience in front-end web development, as well as back-end development in Node.JS.

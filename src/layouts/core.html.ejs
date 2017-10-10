@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title><%= document.title %> // Tom Stollard</title>
+    <title><% if(document.slug != "index"){ %><%= document.title %> // <% } %>Tom Stollard</title>
     <%- getBlock("styles").toHTML() %>
     <%- getBlock("scripts").toHTML() %>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -30,9 +30,8 @@
     </div>
     <div id="footer">
       <h3>&copy; Tom Stollard <%- new Date().getFullYear() %></h3>
-      Hand crafted in the UK with DocPad, SmoothState.js, and lots of other magic - see the code <a href="https://github.com/TomStollard/tomstollard.me.uk">on GitHub</a>
-      <br>
-      Mugshot by the awesome <a href="http://lws.io/">Kevin Lewis</a> at <a href="http://rebelmakers.co.uk/">Rebel Makers Club</a>
+      Built with DocPad, SmoothState.js, and lots of other magic - see the code <a href="https://github.com/TomStollard/tomstollard.me.uk">on GitHub</a><br>
+      Mugshot by <a href="http://lws.io/">Kevin Lewis</a> at <a href="http://rebelmakers.co.uk/">Rebel Makers Club</a>
     </div>
   </body>
 </html>
